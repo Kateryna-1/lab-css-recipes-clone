@@ -2,7 +2,7 @@
 /* Reset default browser styles and provide a consistent starting point */
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 *, *:before, *:after {
@@ -22,3 +22,57 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+
+/* !With a width of body 957px it looks pretty good:) */
+
+.main-header {
+  background-image: url(../images/apple-pie.jpg);
+  color: white;
+  font-size: 50px;
+  padding-top: 190px;
+  padding-bottom: 190px;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.text-wrapper {
+  padding: 60px;
+}
+
+.img {
+  margin: 7% 15%;
+}
+
+.lists-headers {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+ol {
+  /* 1. Remove the default list style */  
+  list-style: none;
+}
+
+ol > li {
+  /* 2. Create a custom list counter */  
+  counter-increment: listcounter;
+}
+
+ol > li::before {
+  /*3. Set the new style for the list markers */
+  content: counter(listcounter) ")";
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li::before {
+  content: "-";
+}
+
+li {
+  margin-left: 12px;
+}
